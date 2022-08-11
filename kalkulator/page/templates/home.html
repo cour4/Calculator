@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<title>Our Funky HTML Page</title>
+
+</head>
+<style>
+.main {
+
+	margin-top: 200px;
+	margin-left: -45px;
+
+}
+button {	
+  background-color: #4CAF50; /* Green */
+  border: solid;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  border-width: 2px;
+  border-color: orangered;
+
+}
+
+li {
+	display: inline-block;
+	margin-top: 5px;
+
+
+
+
+
+}
+.bt1 {
+	background-color: black; /* Green */
+  border: solid;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  border-width: 2px;
+  border-color: black;;
+
+
+}
+.result {
+	font-size: 30px;
+	
+}
+
+
+</style>
+<body>
+	<div class="main">
+	<ul>
+ 	<center><p class="result"> {{ans}}{{ser}}</p></center>
+ 	<center>
+		 <li>	<form action="{% url 'but1' %}" method="post">
+			{% csrf_token %}
+			
+			<button type="submit" name='mybtn2' value={{excel_path}}>1</button>
+		 	</form>
+		 </li>
+		 <li>	<form action="{% url 'but2' %}" method="post">
+			{% csrf_token %}
+			
+			<button type="submit" name='mybtn2' value={{excel_path}}>2</button>
+		 	</form>
+		 </li>
+
+		 <li>	<form action="{% url 'but3' %}" method="post">
+			{% csrf_token %}
+			
+			<button type="submit" name='mybtn2' value={{excel_path}}>3</button>
+		 	</form>
+		 </li>
+		 <br>
+
+		 <li>	<form action="{% url 'but4' %}" method="post">
+			{% csrf_token %}
+			
+			<button type="submit" name='mybtn2' value={{excel_path}}>4</button>
+		 	</form>
+		 </li>
+
+		 <li>	<form action="{% url 'but5' %}" method="post">
+			{% csrf_token %}
+			
+			<button type="submit" name='mybtn2' value={{excel_path}}>5</button>
+		 	</form>
+		 </li>
+
+		 <li>	<form action="{% url 'but6' %}" method="post">
+			{% csrf_token %}
+			
+			<button type="submit" name='mybtn2' value={{excel_path}}>6</button>
+		 	</form>
+		 </li>
+		 <br>
+		 <li>	<form action="{% url 'but7' %}" method="post">
+			{% csrf_token %}
+			
+			<button type="submit" name='mybtn2' value={{excel_path}}>7</button>
+		 	</form>
+		 </li>
+
+		 <li> <form action="{% url 'but8' %}" method="post">
+			{% csrf_token %}
+			
+			<button type="submit" name='mybtn2' value={{excel_path}}>8</button>
+		 	</form>
+		 </li>
+ 		 <li>	<form action="{% url 'but9' %}" method="post">
+				{% csrf_token %}
+				
+				<button type="submit" name='mybtn2' value={{excel_path}}>9</button>
+			 	</form>
+		 </li>
+		 <br>
+		 <li>	 <form action="{% url 'but0' %}" method="post">
+				{% csrf_token %}
+				
+				<button type="submit" name='mybtn2' value={{excel_path}}>0</button>
+			 	</form>
+		 </li>
+ 	</ul>
+	<center>
+	<ul>
+	 	<li><form action="{% url 'but_plus' %}" method="post">
+		{% csrf_token %}
+		
+		<button class="bt1" type="submit" name='mybtn2' value={{excel_path}}>+</button>
+	 	</form></li>
+
+ 		<li><form action="{% url 'but_minus' %}" method="post">
+	{% csrf_token %}
+	
+	<button class="bt1" type="submit" name='mybtn2' value={{excel_path}}>-</button>
+ 	</form></li>
+
+ 	<li><form action="{% url 'but_multi' %}" method="post">
+	{% csrf_token %}
+	
+	<button class="bt1" type="submit" name='mybtn2' value={{excel_path}}>*</button>
+ 	</form></li>
+
+ 	<li><form action="{% url 'but_t' %}" method="post">
+	{% csrf_token %}
+	
+	<button class="bt1" type="submit" name='mybtn2' value={{excel_path}}>/</button>
+ 	</form></li>
+ 	<li><form action="{% url 'ONAV' %}" method="post">
+	{% csrf_token %}
+	
+	<button class="bt1" type="submit" name='mybtn2' value={{excel_path}}>(</button>
+ 	</form></li>
+ 	<li><form action="{% url 'CNAV' %}" method="post">
+	{% csrf_token %}
+	
+	<button class="bt1" type="submit" name='mybtn2' value={{excel_path}}>)</button>
+ 	</form></li>
+ 	<li><form action="{% url 'equale' %}" method="post">
+	{% csrf_token %}
+	
+	<button class="bt1" type="submit" name='mybtn2' value={{excel_path}}>=</button>
+ 	</form></li>
+
+ 	<li><form action="{% url 'erase' %}" method="post">
+	{% csrf_token %}
+	
+	<button class="bt1" type="submit" name='mybtn2' value={{excel_path}}>C</button>
+ 	</form></li>
+ 	</div>
+ 	
+
+</div>
+</body>
+</html>
